@@ -1,0 +1,7 @@
+{
+  "name": "ionic-angular-web3-login",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
