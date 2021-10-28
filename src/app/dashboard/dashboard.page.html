@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title>Dashboard</ion-title>
+    <ion-buttons slot="start">
+      <ion-button (click)="logout()"
+        ><ion-icon slot="icon-only" name="power-outline"></ion-icon
+      ></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let message of messages$ | async">
+      {{message.message}}
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AuthService } from '../services/auth.service';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -6,7 +8,25 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  public isAuthenticating = false;
 
-  constructor() {}
+  constructor(
+    private authService: AuthService,
+    private navCtrl: NavController
+  ) {}
 
+  login() {
+    this.isAuthenticating = true;
+
+    this.authService.signInWithMetaMask().subscribe(
+      () => {
+        this.isAuthenticating = false;
+        this.navCtrl.navigateForward('/dashboard');
+      },
+      (err) => {
+        console.log(err);
+        this.isAuthenticating = false;
+      }
+    );
+  }
 }

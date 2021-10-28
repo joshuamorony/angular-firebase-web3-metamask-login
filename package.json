@@ -15,6 +15,7 @@
   "dependencies": {
     "@angular/common": "~12.1.1",
     "@angular/core": "~12.1.1",
+    "@angular/fire": "^7.1.1",
     "@angular/forms": "~12.1.1",
     "@angular/platform-browser": "~12.1.1",
     "@angular/platform-browser-dynamic": "~12.1.1",
@@ -25,6 +26,10 @@
     "@capacitor/keyboard": "1.1.2",
     "@capacitor/status-bar": "1.0.5",
     "@ionic/angular": "^5.5.2",
+    "@metamask/detect-provider": "^1.2.0",
+    "@metamask/eth-sig-util": "^4.0.0",
+    "firebase": "^9.1.0",
+    "rxfire": "^6.0.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.2.0",
     "zone.js": "~0.11.4"
