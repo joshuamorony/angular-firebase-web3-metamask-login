@@ -83,7 +83,7 @@ export const verifySignedMessage = functions.https.onRequest(
           });
 
           // See if that matches the address the user is claiming the signature is from
-          if (recoveredAddress === address) {
+          if (recoveredAddress.toLowerCase() === address.toLowerCase()) {
             // The signature was verified - update the nonce to prevent replay attacks
             // update nonce
             await userDocRef.update({
