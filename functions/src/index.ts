@@ -110,8 +110,4 @@ export const verifySignedMessage = functions.https.onRequest(
     })
 );
 
-const toHex = (stringToConvert: string) =>
-  stringToConvert
-    .split('')
-    .map((c) => c.charCodeAt(0).toString(16).padStart(2, '0'))
-    .join('');
+const toHex = (stringToConvert: string) => Buffer.from(stringToConvert, 'utf8').toString('hex')
